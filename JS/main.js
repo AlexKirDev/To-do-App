@@ -34,7 +34,6 @@ function  addTask() {
     input.focus();
 }
 
-
 function clear() {
     currentCard.forEach( (item) => {
         item.style.display = 'none';
@@ -53,8 +52,6 @@ document.addEventListener('keydown', function (event) {
 clearCards.addEventListener('click', clear);
 
 laterButton.addEventListener('click', function() {
-
-
 
     laterWindow.style.height = '100%';
 })
@@ -102,13 +99,9 @@ function changePeriod(a) {
     let periodCHanger = a.innerHTML;
 
     document.querySelector('.choseDateSelectMain').innerHTML = periodCHanger;
+
     // document.querySelector('.choseDateSelectDropdown').style.display = 'none';
-
-
-
-
     // a.parentElement.firstElementChild.innerHTML = a.innerText;
-
     //
     // let periods = document.querySelectorAll('.choseDateSelect');
     // periods[1].classList.add('dropdownOff');
