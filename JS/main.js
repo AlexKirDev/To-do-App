@@ -6,9 +6,10 @@ let laterButton = document.querySelector('.laterButton');
 let laterWindow = document.querySelector('.laterWindow');
 let finishedButton = document.querySelector('.finishedButton');
 let finishedWindow = document.querySelector('.finishedWindow');
-let when = document.querySelector('.choseDateSelectMain').innerHTML;
+
 
 function  addTask() {
+    let when = document.querySelector('.choseDateSelectMain').innerHTML;
     let tea = input.value;
 
 
@@ -90,21 +91,28 @@ function controlLaterElements2(a) {
 }
 
 
-function openDropdown(a) {
-    let subling1 = a.nextElementSibling;
-    subling1.classList.toggle('dropdownOff');
-    let subling2 = a.nextElementSibling.nextElementSibling;
-    subling2.classList.toggle('dropdownOff');
-}
+// function openDropdown(a) {
+//     let subling1 = a.nextElementSibling;
+//     subling1.classList.toggle('dropdownOff');
+//
+// }
 
 function changePeriod(a) {
 
-    a.parentElement.firstElementChild.innerHTML = a.innerText;
-    when = a.innerHTML;
+    let periodCHanger = a.innerHTML;
 
-    let periods = document.querySelectorAll('.choseDateSelect');
-    periods[1].classList.add('dropdownOff');
-    periods[2].classList.add('dropdownOff');
+    document.querySelector('.choseDateSelectMain').innerHTML = periodCHanger;
+    // document.querySelector('.choseDateSelectDropdown').style.display = 'none';
+
+
+
+
+    // a.parentElement.firstElementChild.innerHTML = a.innerText;
+
+    //
+    // let periods = document.querySelectorAll('.choseDateSelect');
+    // periods[1].classList.add('dropdownOff');
+    // periods[2].classList.add('dropdownOff');
 
 }
 

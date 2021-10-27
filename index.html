@@ -17,9 +17,17 @@
                 <div class="form">
                     <input type="text" spellcheck="false" placeholder="To make cofee..." autofocus>
                     <div class="choseDate">
-                        <div class="choseDateSelect choseDateSelectMain" onclick="openDropdown(this)">Today <i class="fas fa-arrow-down"></i></div>
-                        <div class="choseDateSelect dropdownOff" onclick="changePeriod(this)">Tomorrow</div>
-                        <div class="choseDateSelect dropdownOff" onclick="changePeriod(this)">Next year</div>
+                        <div class="choseDateSelect choseDateSelectMain" >Today</div>
+                        <div class="choseDateSelectDropdown ">
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Today</div>
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Tomorrow</div>
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Next year</div>
+                        </div>
+
+
+
+
+
 
                         <!--         <i class="fas fa-arrow-down"></i> -->
                         <!--           <img src="https://drive.google.com/file/d/10Ak9sxPv6xlAMndnpEaKNWevaXHwb0Lf/view?usp=sharing" alt=""> -->
