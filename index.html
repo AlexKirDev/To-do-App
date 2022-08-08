@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/SCSS/main.css"/>
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/0e806118ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mainWrapper">
+        <div class="wrapper1">
+            <h1>To Do List</h1>
+        </div>
+        <div class="wrapper2main">
+            <div class="wrapper2">
+                <div class="form">
+                    <input type="text" spellcheck="false" placeholder="To make cofee..." autofocus>
+                    <div class="choseDate">
+                        <div class="choseDateSelect choseDateSelectMain" >Today</div>
+                        <div class="choseDateSelectDropdown ">
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Today</div>
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Tomorrow</div>
+                            <div class="choseDateSelectDropdownSection" onclick="changePeriod(this)">Next year</div>
+                        </div>
+                        <!--         <i class="fas fa-arrow-down"></i> -->
+                        <!--           <img src="https://drive.google.com/file/d/10Ak9sxPv6xlAMndnpEaKNWevaXHwb0Lf/view?usp=sharing" alt=""> -->
+                    </div>
+                    <div class="add">Add</div>
+                </div>
+                <div class="taskCard">
+                    <div class="taskCardText">To make cofee</div>
+                    <div class="taskCardDate">Today</div>
+                    <div class="taskCardControls">
+                        <div class="taskCardControlsFinished" onclick="controlFinishedElements2(this)">
+                            <i title = 'done' class="far fa-check-circle"></i>
+                        </div>
+                        <div class="taskCardControlsLater" onclick="controlLaterElements2(this)">
+                            <i title = 'later' class="fas fa-hourglass-start"></i>
+                        </div>
+                        <div class="taskCardControlsClose" onclick="controlCloseElements2(this)">
+                            <i title = 'close' class="fas fa-times test"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="taskCard">
+                    <div class="taskCardText">To buy a rolls royce</div>
+                    <div class="taskCardDate">Today</div>
+                    <div class="taskCardControls">
+                        <div class="taskCardControlsFinished" onclick="controlFinishedElements2(this)">
+                            <i title = 'done' class="far fa-check-circle"></i>
+                        </div>
+                        <div class="taskCardControlsLater" onclick="controlLaterElements2(this)">
+                            <i title = 'later' class="fas fa-hourglass-start" ></i>
+                        </div>
+                        <div class="taskCardControlsClose" onclick="controlCloseElements2(this)">
+                            <i title = 'close' class="fas fa-times test"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="taskCard">
+                    <div class="taskCardText">To destroy the world</div>
+                    <div class="taskCardDate">Today</div>
+                    <div class="taskCardControls">
+                        <div class="taskCardControlsFinished" onclick="controlFinishedElements2(this)">
+                            <i title = 'done' class="far fa-check-circle"></i>
+                        </div>
+                        <div class="taskCardControlsLater" onclick="controlLaterElements2(this)">
+                            <i title = 'later' class="fas fa-hourglass-start"></i>
+                        </div>
+                        <div class="taskCardControlsClose" onclick="controlCloseElements2(this)">
+                            <i title = 'close' class="fas fa-times test"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="wrapper3">
+            <div class="clearButton">Clear</div>
+            <div class="laterButton">Later</div>
+            <div class="finishedButton">Finished</div>
+        </div>
+        <div class="laterWindow">
+            <h1>Later</h1>
+            <div class="laterTasks">
+            </div>
+            <div class="laterBtn">
+                <div class="laterWindowClose">Close</div>
+            </div>
+        </div>
+        <div class="finishedWindow">
+            <h1>Finished</h1>
+            <div class="finishedTasks">
+            </div>
+            <div class="finishedBtn">
+                <div class="finishedWindowClose">Close</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="JS/main.js"></script>
+
+</body>
+</html>

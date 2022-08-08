@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+:root {
+  --mainTransition: 0.5s ease;
+  --color1: #540d6e;
+  --color2: #ffeedd;
+  --color3: #b8b8ff;
+  --color4: #9381ff;
+  --color99999: #fff;
+}
+
+.wrapper3 .clearButton, .wrapper3 .laterButton, .wrapper3 .finishedButton, .wrapper3, .taskCardControlsClose, .taskCardControlsFinished, .taskCardControlsLater, .taskCardText, .taskCardDate, .taskCardControls, .taskCard, .form .choseDateSelectDropdownSection, .form .choseDateSelectDropdown, .form .choseDateSelect, .form .choseDate, .form .add, .form, .wrapper2, .wrapper1, .mainWrapper .laterWindow .laterBtn .laterWindowClose, .mainWrapper .laterWindow .laterBtn .finishedWindowClose, .mainWrapper .laterWindow .finishedBtn .laterWindowClose, .mainWrapper .laterWindow .finishedBtn .finishedWindowClose, .mainWrapper .finishedWindow .laterBtn .laterWindowClose, .mainWrapper .finishedWindow .laterBtn .finishedWindowClose, .mainWrapper .finishedWindow .finishedBtn .laterWindowClose, .mainWrapper .finishedWindow .finishedBtn .finishedWindowClose, .mainWrapper .laterWindow .laterBtn, .mainWrapper .laterWindow .finishedBtn, .mainWrapper .finishedWindow .laterBtn, .mainWrapper .finishedWindow .finishedBtn, .mainWrapper .laterWindow .finishedTasks, .mainWrapper .laterWindow .laterTasks, .mainWrapper .finishedWindow .finishedTasks, .mainWrapper .finishedWindow .laterTasks, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper3, .form input, .wrapper2, .wrapper1, .mainWrapper .laterWindow .finishedTasks, .mainWrapper .laterWindow .laterTasks, .mainWrapper .finishedWindow .finishedTasks, .mainWrapper .finishedWindow .laterTasks, .mainWrapper .laterWindow h1, .mainWrapper .finishedWindow h1, .mainWrapper .laterWindow, .mainWrapper .finishedWindow {
+  font-family: "Indie Flower", cursive;
+  color: var(--color1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.mainWrapper {
+  position: relative;
+  height: 80%;
+  min-width: 700px;
+  padding: 20px;
+  background-color: var(--color2);
+  border-radius: 20px;
+}
+.mainWrapper .laterWindow, .mainWrapper .finishedWindow {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  height: 0;
+  background-color: var(--color2);
+  border-radius: 20px;
+  transition: height var(--mainTransition), display 0.1s ease;
+  z-index: 999;
+  z-index: 999;
+  overflow: hidden;
+}
+.mainWrapper .laterWindow h1, .mainWrapper .finishedWindow h1 {
+  height: 15%;
+  font-size: 60px;
+  text-align: center;
+  color: var(--color1);
+  margin: 0;
+}
+.mainWrapper .laterWindow .finishedTasks, .mainWrapper .laterWindow .laterTasks, .mainWrapper .finishedWindow .finishedTasks, .mainWrapper .finishedWindow .laterTasks {
+  justify-content: flex-start;
+  height: 70%;
+  flex-direction: column;
+  overflow: auto;
+}
+.mainWrapper .laterWindow .laterBtn, .mainWrapper .laterWindow .finishedBtn, .mainWrapper .finishedWindow .laterBtn, .mainWrapper .finishedWindow .finishedBtn {
+  height: 15%;
+}
+.mainWrapper .laterWindow .laterBtn .laterWindowClose, .mainWrapper .laterWindow .laterBtn .finishedWindowClose, .mainWrapper .laterWindow .finishedBtn .laterWindowClose, .mainWrapper .laterWindow .finishedBtn .finishedWindowClose, .mainWrapper .finishedWindow .laterBtn .laterWindowClose, .mainWrapper .finishedWindow .laterBtn .finishedWindowClose, .mainWrapper .finishedWindow .finishedBtn .laterWindowClose, .mainWrapper .finishedWindow .finishedBtn .finishedWindowClose {
+  width: 30%;
+  min-height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.mainWrapper .laterWindow .laterBtn .laterWindowClose:hover, .mainWrapper .laterWindow .laterBtn .finishedWindowClose:hover, .mainWrapper .laterWindow .finishedBtn .laterWindowClose:hover, .mainWrapper .laterWindow .finishedBtn .finishedWindowClose:hover, .mainWrapper .finishedWindow .laterBtn .laterWindowClose:hover, .mainWrapper .finishedWindow .laterBtn .finishedWindowClose:hover, .mainWrapper .finishedWindow .finishedBtn .laterWindowClose:hover, .mainWrapper .finishedWindow .finishedBtn .finishedWindowClose:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+  cursor: pointer;
+}
+
+.wrapper1 {
+  height: 15%;
+}
+.wrapper1 h1 {
+  font-size: 60px;
+  color: var(--color1);
+}
+
+.wrapper2main {
+  overflow: auto;
+  height: 70%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.wrapper2 {
+  justify-content: flex-start;
+  height: 70%;
+  flex-direction: column;
+}
+
+.form {
+  min-height: 40px;
+  width: 100%;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  transition: all var(--mainTransition);
+}
+.form input {
+  background-color: var(--color2);
+  height: 100%;
+  width: 70%;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: var(--color1);
+  padding-left: 20px;
+  transition: all var(--mainTransition);
+}
+.form input:focus, .form input:hover {
+  outline: none;
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.form input::placeholder {
+  color: var(--color1);
+}
+.form .choseDate, .form .add {
+  height: 100%;
+  width: 15%;
+  border-left: 2px solid var(--color3);
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color1);
+  transition: all var(--mainTransition);
+}
+.form .choseDate:hover, .form .add:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.form .add {
+  border-radius: 0 10px 10px 0;
+}
+.form .choseDate:hover .choseDateSelectDropdown {
+  display: block;
+}
+.form .choseDate {
+  position: relative;
+}
+.form .choseDate::after {
+  font-family: "FontAwesome", Serif;
+  content: "";
+}
+.form .choseDateSelect {
+  height: 100%;
+  border: solid var(--color3);
+  border-width: 1px 2px 1px 2px;
+  outline: none;
+  background-color: var(--color2);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  transition: all var(--mainTransition);
+  position: absolute;
+  width: 100%;
+}
+.form .choseDateSelect:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.form .choseDateSelect:hover .choseDateSelectDropdown {
+  display: block;
+}
+.form .choseDateSelectDropdown {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+.form .choseDateSelectDropdownSection {
+  border: solid var(--color3);
+  border-width: 1px 2px 1px 2px;
+  margin-top: 2px;
+  outline: none;
+  background-color: var(--color2);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--mainTransition);
+  padding: 3px 0 3px 0;
+}
+.form .choseDateSelectDropdownSection:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.form .choseDateSelect:nth-child(2) {
+  top: 100%;
+}
+.form .choseDateSelect:nth-child(3) {
+  top: 200%;
+  border-radius: 0 0 10px 10px;
+}
+.form .choseDateSelect i {
+  margin-left: 10px;
+}
+.form .choseDate .dropdownOff {
+  display: none;
+}
+
+.taskCard {
+  min-height: 40px;
+  width: 100%;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  transition: all var(--mainTransition);
+}
+.taskCardText, .taskCardDate, .taskCardControls {
+  height: 100%;
+  transition: all var(--mainTransition);
+}
+.taskCardText:hover, .taskCardDate:hover, .taskCardControls:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.taskCardText {
+  border-radius: 10px 0 0 10px;
+  width: 55%;
+}
+.taskCardDate {
+  width: 20%;
+  border-left: 2px solid var(--color3);
+  font-size: 20px;
+  font-weight: 700;
+}
+.taskCardControls {
+  border-radius: 0 10px 10px 0;
+  width: 25%;
+  border-left: 2px solid var(--color3);
+  font-size: 20px;
+  font-weight: 700;
+  transition: all var(--mainTransition);
+}
+.taskCardControlsFinished, .taskCardControlsLater {
+  width: 33%;
+  height: 100%;
+  border-right: 2px solid var(--color3);
+  cursor: pointer;
+}
+.taskCardControlsFinished:hover, .taskCardControlsLater:hover {
+  color: var(--color4);
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.taskCardControlsClose, .taskCardControlsLater {
+  width: 33%;
+  height: 100%;
+  cursor: pointer;
+}
+.taskCardControlsClose:hover, .taskCardControlsLater:hover {
+  color: var(--color4);
+  box-shadow: 0 0 5px 4px var(--color4);
+}
+.taskCardControlsClose:hover i, .taskCardControlsLater:hover i {
+  transition: all var(--mainTransition);
+  transform: rotate(180deg);
+}
+.taskCardControlsClose {
+  border-radius: 0 10px 10px 0;
+}
+.taskCardControlsFinished:hover i {
+  transition: all var(--mainTransition);
+  transform: scale(1.5);
+}
+
+.wrapper3 {
+  justify-content: space-between;
+  height: 15%;
+}
+.wrapper3 .clearButton, .wrapper3 .laterButton, .wrapper3 .finishedButton {
+  min-width: 30%;
+  min-height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+}
+.wrapper3 .clearButton:hover, .wrapper3 .laterButton:hover, .wrapper3 .finishedButton:hover {
+  box-shadow: 0 0 5px 4px var(--color4);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
