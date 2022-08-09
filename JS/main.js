@@ -7,7 +7,7 @@ let laterWindow = document.querySelector('.laterWindow');
 let finishedButton = document.querySelector('.finishedButton');
 let finishedWindow = document.querySelector('.finishedWindow');
 
-//I may refactor the following function using 'createElement'
+//I may refactor the following function using 'createElement'.
 
 function  addTask() {
     let when = document.querySelector('.choseDateSelectMain').innerHTML;
