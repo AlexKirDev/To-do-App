@@ -76,8 +76,19 @@ document.querySelector('.finishedWindowClose').addEventListener('click', functio
 function controlFinishedElements2(a) {
     let finishedContainer = document.querySelector('.finishedTasks')
     let copiedTask = a.parentNode.parentNode.cloneNode(true);
-    a.parentNode.parentNode.remove();
-    finishedContainer.append(copiedTask);
+
+    //finish card mooving!!!!
+
+    let cardToMove = a.parentNode.parentNode;
+    // alert(cardToMove.className);
+    cardToMove.style.transform = 'translateY(200px)';
+    cardToMove.style.color = 'green';
+
+    setTimeout(()=>{
+        a.parentNode.parentNode.remove();
+        finishedContainer.append(copiedTask);
+    },500)
+
 }
 
 function controlLaterElements2(a) {
@@ -101,12 +112,10 @@ function changePeriod(a) {
 
     document.querySelector('.choseDateSelectMain').innerHTML = periodCHanger;
 
-    // document.querySelector('.choseDateSelectDropdown').style.display = 'none';
-    // a.parentElement.firstElementChild.innerHTML = a.innerText;
-    //
-    // let periods = document.querySelectorAll('.choseDateSelect');
-    // periods[1].classList.add('dropdownOff');
-    // periods[2].classList.add('dropdownOff');
+    // alert(document.querySelector('.choseDateSelectDropdown'));
+    let dropdown = document.querySelector('.choseDateSelectDropdown');
+    dropdown.style.display = 'none';
+    setTimeout(()=>{dropdown.style.display = ''},1);
 
 }
 
